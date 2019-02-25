@@ -7,12 +7,14 @@ import org.openqa.selenium.support.PageFactory;
 
 import main.resources.library.TestBase;
 
-public class Md1 extends TestBase {
-	public static WebDriver driver;
+
+public class Md1PageObjects extends TestBase {
 	
-	public Md1 (WebDriver driver)
+	
+	//static WebDriver driver;
+	public Md1PageObjects (WebDriver driver)
 	{
-		this.driver = driver;
+		//this.driver = driver;
 		PageFactory.initElements(driver, this);
 	}
 	
@@ -44,6 +46,5 @@ public class Md1 extends TestBase {
 	public WebElement logoutBtn() { return btnLogout; }
 	public WebElement accountNumber() { return txtAccNumber; }
 	public WebElement findBtn() { return btnFind; }
-	
 
-}
+ }

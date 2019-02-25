@@ -9,5 +9,7 @@
 	<classpathentry kind="lib" path="C:/selenium-java/selenium-java-3.141.59/libs/guava-25.0-jre.jar"/>
 	<classpathentry kind="lib" path="C:/selenium-java/selenium-java-3.141.59/libs/okhttp-3.11.0.jar"/>
 	<classpathentry kind="lib" path="C:/selenium-java/selenium-java-3.141.59/libs/okio-1.14.0.jar"/>
+	<classpathentry kind="lib" path="C:/selenium-java/testng-6.7.jar"/>
+	<classpathentry kind="lib" path="C:/selenium-java/jcommander-1.72.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
