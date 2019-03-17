@@ -8,34 +8,36 @@ import org.openqa.selenium.support.PageFactory;
 import main.resources.library.TestBase;
 
 
-public class Md1PageObjects extends TestBase {
+public class FrontInvPageObjects extends TestBase {
 	
 	
-	//static WebDriver driver;
-	public Md1PageObjects (WebDriver driver)
+	
+	public FrontInvPageObjects (WebDriver driver)
 	{
 		//this.driver = driver;
 		PageFactory.initElements(driver, this);
 	}
 	
 	
-	@FindBy (id="ctrlLogin_UserName")
+	@FindBy (id="FORMLOGINid")
 	WebElement txtUserName;
 	
-	@FindBy (id="ctrlLogin_Password")
+	@FindBy (id="FORMLOGINpwd")
 	WebElement txtPassword;
 	
-	@FindBy (id="ctrlLogin_LoginButton")
+	@FindBy (id="btSubmit")
 	WebElement btnLogin;
 	
 	@FindBy (id="lbtnLogout")
 	WebElement btnLogout;
 	
-	@FindBy (id="ts_findparty_UCFindParty_txtAccountNo")
-	WebElement txtAccNumber;
+	@FindBy (id="id_current_user_name")
+	WebElement currentUserName;
 	
-	@FindBy (id="ts_findparty_UCFindParty_btnFindParty")
-	WebElement btnFind;
+	@FindBy (xpath="//div[contains(text(),'Deals')]")
+	WebElement txtDeals;
+	
+	
 	
 	public WebElement userName() { return txtUserName; }
 	
@@ -43,8 +45,12 @@ public class Md1PageObjects extends TestBase {
 	
 	public WebElement loginBtn() { return btnLogin; }
 	
+	public WebElement currentUser() {return currentUserName;}
+	
 	public WebElement logoutBtn() { return btnLogout; }
-	public WebElement accountNumber() { return txtAccNumber; }
+	
+	public WebElement dealsLink() { return txtDeals; }
+	
 	public WebElement findBtn() { return btnFind; }
 
  }

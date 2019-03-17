@@ -6,6 +6,7 @@ import java.io.IOException;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -27,7 +28,7 @@ public class TestBase  {
 		try {
 			prop = new Properties();
 			FileInputStream fis;
-			fis = new FileInputStream("C:\\Repos\\SeleniumJava\\src\\main\\resources\\data.properties");
+			fis = new FileInputStream("C:\\Source\\SeleniumJava\\src\\main\\resources\\data.properties");
 			prop.load(fis);
 			
 		} catch (FileNotFoundException e) {
@@ -41,18 +42,18 @@ public class TestBase  {
 		
 		if (browserName.equals("chrome"))
 		{
-			System.setProperty("webdriver.chrome.driver", "c:\\chromedriver.exe");
+			System.setProperty("webdriver.chrome.driver", "c:\\Selenium\\chromedriver.exe");
 			driver = new ChromeDriver();
 		}
 		if (browserName.equals("firefox"))
 		{
-			System.setProperty("webdriver.gecko.driver", "c:\\geckodriver.exe");
+			System.setProperty("webdriver.gecko.driver", "c:\\Selenium\\geckodriver.exe");
 			driver = new FirefoxDriver();
 		}
 		
 		if (browserName.equals("ie"))
 		{
-			System.setProperty("webdriver.ie.driver", "c:\\IEDriverServer.exe");
+			System.setProperty("webdriver.ie.driver", "c:\\Selenium\\IEDriverServer.exe");
 			DesiredCapabilities caps = DesiredCapabilities.internetExplorer();
 			caps.setCapability("ignoreZoomSetting", true);
 			driver = new InternetExplorerDriver(caps);
@@ -67,9 +68,9 @@ public class TestBase  {
 	}
 	
 	
-	public static void waitForElement(WebElement locator, int timeout)
+	public static void waitForElement(WebElement locator, long timeOutInSeconds)
 	{
-		new WebDriverWait(driver,timeout).until(ExpectedConditions.visibilityOf(locator));
-	}
+		new WebDriverWait(driver,timeOutInSeconds).until(ExpectedConditions.visibilityOf(locator));
+	}	
 	
 }

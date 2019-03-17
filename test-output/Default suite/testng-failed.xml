@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Default suite]">
-  <test name="Default test(failed)" preserve-order="true">
+<suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="test.Md1TestSuite">
+      <class name="test.FrontInvestTestSuite">
         <methods>
-          <include name="cashWithdraw"/>
+          <include name="tearDown"/>
+          <include name="createNewDeal"/>
           <include name="setUp"/>
-          <include name="cashDeposit"/>
         </methods>
-      </class> <!-- test.Md1TestSuite -->
+      </class> <!-- test.FrontInvestTestSuite -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
